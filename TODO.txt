@@ -1,0 +1,7 @@
+TODO
+
+- Switch over to React and get base app running
+- Spec out the base boostrap layout
+- Get layout/color scheme decisions
+- Start adding real content
+- Figure out hosting solution
