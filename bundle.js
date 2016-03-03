@@ -19689,9 +19689,23 @@
 						bs.Nav,
 						null,
 						React.createElement(
-							bs.NavItem,
-							{ eventKey: 1, href: '#' },
-							'Videos'
+							bs.NavDropdown,
+							{ eventKey: 1, title: 'Videos' },
+							React.createElement(
+								bs.MenuItem,
+								{ eventKey: 1.1, href: 'https://vimeo.com/77957602', target: '_blank' },
+								'PBS NewsHour'
+							),
+							React.createElement(
+								bs.MenuItem,
+								{ eventKey: 1.2 },
+								'Nashville'
+							),
+							React.createElement(
+								bs.MenuItem,
+								{ eventKey: 1.3 },
+								'YouTube Channel'
+							)
 						),
 						React.createElement(
 							bs.NavItem,

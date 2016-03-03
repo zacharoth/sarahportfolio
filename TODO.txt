@@ -2,6 +2,9 @@ TODO
 
 - Spec out the base boostrap layout
 	- What's with the woff files etc in the base dir?
+	- Footer
+	- Main page content
 - Get layout/color scheme decisions
 - Start adding real content
+	- Routing?
 - Figure out hosting solution
