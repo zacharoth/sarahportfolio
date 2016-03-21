@@ -1,0 +1,17 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 70px;
+	width: 100%;
+	background-color: $gray;
+	border-top: 1px solid $grayBorder;
+	color: $grayFont;
+	font-size: 14px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	a {
+		color: $grayFont;
+	}
+}

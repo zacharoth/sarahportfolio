@@ -1,30 +1,50 @@
 require('bootstrap/dist/css/bootstrap.css');
+require('../sass/main.scss');
+var About = require('./about');
 var bs = require('react-bootstrap');
+var Footer = require('./footer');
+var Header = require('./header');
 var React = require('react');
+var Video = require('./video');
 
 var App = React.createClass({
 	
+	getInitialState() {
+		return {
+			path: location.hash,
+		};
+	},
+
+	navClick(path) {
+		if (path !== this.state.path) {
+			this.setState({
+				path: path,
+			});
+		}
+	},
+
+	renderMainContent() {
+		switch(this.state.path) {
+			case '#nancyreagan':
+				return <Video url='https://www.youtube.com/embed/VESG6VuCS9c' />;
+			default:
+				return <About />;
+		}
+	},
+
 	render() {
-	var header = "This is Sarah's portfolio!";
 
 		return (
 			<div>
-				<bs.Navbar>
-					<bs.Navbar.Header>
-						<bs.Navbar.Brand>
-							<a href="#">Sarah Corapi</a>
-						</bs.Navbar.Brand>
-					</bs.Navbar.Header>
-					<bs.Nav>
-						<bs.NavDropdown eventKey={1} title="Videos">
-							<bs.MenuItem eventKey={1.1} href="https://vimeo.com/77957602" target="_blank">PBS NewsHour</bs.MenuItem>
-							<bs.MenuItem eventKey={1.2}>Nashville</bs.MenuItem>
-							<bs.MenuItem eventKey={1.3}>YouTube Channel</bs.MenuItem>
-						</bs.NavDropdown>
-						<bs.NavItem eventKey={2} href="#">Resume</bs.NavItem>
-						<bs.NavItem eventKey={3} href="#">About</bs.NavItem>
-					</bs.Nav>
-				</bs.Navbar>
+				<Header navClick={this.navClick}/>
+				<div className='main-content'>
+					<bs.Row>
+						<bs.Col md={10} mdOffset={1}>
+							{ this.renderMainContent() }
+						</bs.Col>
+					</bs.Row>
+				</div>
+				<Footer />
 			</div>
 		);
 	}

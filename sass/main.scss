@@ -1,0 +1,15 @@
+$black: #333333;
+$gray: #f8f8f8;
+$grayBorder: #e7e7e7;
+$grayFont: #777777;
+
+#app {
+	position: relative;
+	min-height: 100vh;
+}
+
+.main-content {
+	padding: 0 0 70px;
+}
+
+@import '_footer.scss';
