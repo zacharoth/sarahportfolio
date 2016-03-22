@@ -1,4 +1,8 @@
-var bs = require('react-bootstrap');
+var MenuItem = require('react-bootstrap/lib/MenuItem');
+var Nav = require('react-bootstrap/lib/Nav');
+var Navbar = require('react-bootstrap/lib/Navbar');
+var NavDropdown = require('react-bootstrap/lib/NavDropdown');
+var NavItem = require('react-bootstrap/lib/NavItem');
 var React = require('react');
 
 var Header = React.createClass({
@@ -9,32 +13,30 @@ var Header = React.createClass({
 
 	render() {
 		return (
-			<bs.Navbar>
-				<bs.Navbar.Header>
-					<bs.Navbar.Brand>
+			<Navbar>
+				<Navbar.Header>
+					<Navbar.Brand>
 						<a href="#" onClick={() => this.props.navClick('#')}>Sarah Corapi</a>
-					</bs.Navbar.Brand>
-				</bs.Navbar.Header>
-				<bs.Nav>
-					<bs.NavDropdown title="Videos">
-						<bs.MenuItem onClick={() => this.props.navClick('#')} 
-							href="https://vimeo.com/77957602" target="_blank">
-							PBS NewsHour
-						</bs.MenuItem>
-						<bs.MenuItem onClick={() => this.props.navClick('#nancyreagan')} 
+					</Navbar.Brand>
+				</Navbar.Header>
+				<Nav>
+					<NavDropdown title="Videos" id='videoDropdown'>
+						<MenuItem onClick={() => this.props.navClick('#sunkim')} 
+							href='#sunkim'>
+							Christine Sun Kim
+						</MenuItem>
+						<MenuItem onClick={() => this.props.navClick('#nancyreagan')} 
 							href='#nancyreagan'>
 							Nancy Reagan Obituary
-						</bs.MenuItem>
-						<bs.MenuItem onClick={() => this.props.navClick('#')}>Nashville</bs.MenuItem>
-						<bs.MenuItem onClick={() => this.props.navClick('#')}>YouTube Channel</bs.MenuItem>
-					</bs.NavDropdown>
-					<bs.NavItem href="https://drive.google.com/file/d/0B1yWL4Lc9hjcV19BOURyWmZVbm8/view?usp=sharing" target='_blank'>
+						</MenuItem>
+					</NavDropdown>
+					<NavItem href="https://drive.google.com/file/d/0B1yWL4Lc9hjcV19BOURyWmZVbm8/view?usp=sharing" target='_blank'>
 						Resume
-					</bs.NavItem>
-					<bs.NavItem href='https://whirlednavigation.wordpress.com/' target='_blank'>Blog</bs.NavItem>
-					<bs.NavItem onClick={() => this.props.navClick('#')} href="#">About</bs.NavItem>
-				</bs.Nav>
-			</bs.Navbar>
+					</NavItem>
+					<NavItem href='https://whirlednavigation.wordpress.com/' target='_blank'>Blog</NavItem>
+					<NavItem onClick={() => this.props.navClick('#')} href="#">About</NavItem>
+				</Nav>
+			</Navbar>
 		);
 	}
 });

@@ -19658,10 +19658,11 @@
 	__webpack_require__(160);
 	__webpack_require__(169);
 	var About = __webpack_require__(171);
-	var bs = __webpack_require__(172);
+	var Col = __webpack_require__(235);
 	var Footer = __webpack_require__(416);
 	var Header = __webpack_require__(417);
 	var React = __webpack_require__(1);
+	var Row = __webpack_require__(407);
 	var Video = __webpack_require__(418);
 
 	var App = React.createClass({
@@ -19685,7 +19686,9 @@
 		renderMainContent() {
 			switch (this.state.path) {
 				case '#nancyreagan':
-					return React.createElement(Video, { url: 'https://www.youtube.com/embed/VESG6VuCS9c' });
+					return React.createElement(Video, { name: 'nancyreagan' });
+				case '#sunkim':
+					return React.createElement(Video, { name: 'sunkim' });
 				default:
 					return React.createElement(About, null);
 			}
@@ -19701,11 +19704,11 @@
 					'div',
 					{ className: 'main-content' },
 					React.createElement(
-						bs.Row,
+						Row,
 						null,
 						React.createElement(
-							bs.Col,
-							{ md: 10, mdOffset: 1 },
+							Col,
+							{ md: 10, mdOffset: 1, style: { marginBottom: 20 } },
 							this.renderMainContent()
 						)
 					)
@@ -20132,7 +20135,7 @@
 
 
 	// module
-	exports.push([module.id, "#app {\n  position: relative;\n  min-height: 100vh; }\n\n.main-content {\n  padding: 0 0 70px; }\n\n.footer {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  height: 70px;\n  width: 100%;\n  background-color: #f8f8f8;\n  border-top: 1px solid #e7e7e7;\n  color: #777777;\n  font-size: 14px;\n  padding-top: 15px;\n  padding-bottom: 15px; }\n  .footer a {\n    color: #777777; }\n", ""]);
+	exports.push([module.id, "#app {\n  position: relative;\n  min-height: 100vh; }\n\n.main-content {\n  padding: 0 0 80px; }\n\n.footer {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  height: 80px;\n  width: 100%;\n  background-color: #f8f8f8;\n  border-top: 1px solid #e7e7e7;\n  color: #777777;\n  font-size: 14px;\n  padding-top: 15px;\n  padding-bottom: 15px; }\n  .footer a {\n    color: #777777; }\n", ""]);
 
 	// exports
 
@@ -37248,8 +37251,9 @@
 /* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bs = __webpack_require__(172);
+	var Col = __webpack_require__(235);
 	var React = __webpack_require__(1);
+	var Row = __webpack_require__(407);
 
 	var Footer = React.createClass({
 		displayName: 'Footer',
@@ -37264,11 +37268,11 @@
 					'div',
 					{ className: 'container' },
 					React.createElement(
-						bs.Row,
+						Row,
 						null,
 						React.createElement(
-							bs.Col,
-							{ md: 4 },
+							Col,
+							{ md: 4, sm: 4 },
 							React.createElement(
 								'a',
 								{ href: 'mailto:sarahcorapi@gmail.com' },
@@ -37284,8 +37288,8 @@
 							'All Rights Reserved'
 						),
 						React.createElement(
-							bs.Col,
-							{ md: 4, mdOffset: 4, style: { textAlign: 'right' } },
+							Col,
+							{ md: 4, mdOffset: 4, sm: 4, smOffset: 4, style: { textAlign: 'right' } },
 							React.createElement(
 								'a',
 								{ href: 'https://twitter.com/SarahCorapi', target: '_blank' },
@@ -37296,6 +37300,13 @@
 								'a',
 								{ href: 'https://www.linkedin.com/in/sarahcorapi', target: '_blank' },
 								'LinkedIn'
+							),
+							React.createElement('br', null),
+							React.createElement(
+								'a',
+								{ href: 'https://github.com/zacharoth', target: '_blank',
+									style: { fontSize: 10, fontStyle: 'italic' } },
+								'Built with love by Zach Roth'
 							)
 						)
 					)
@@ -37310,7 +37321,11 @@
 /* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bs = __webpack_require__(172);
+	var MenuItem = __webpack_require__(350);
+	var Nav = __webpack_require__(377);
+	var Navbar = __webpack_require__(378);
+	var NavDropdown = __webpack_require__(385);
+	var NavItem = __webpack_require__(386);
 	var React = __webpack_require__(1);
 
 	var Header = React.createClass({
@@ -37323,13 +37338,13 @@
 
 		render() {
 			return React.createElement(
-				bs.Navbar,
+				Navbar,
 				null,
 				React.createElement(
-					bs.Navbar.Header,
+					Navbar.Header,
 					null,
 					React.createElement(
-						bs.Navbar.Brand,
+						Navbar.Brand,
 						null,
 						React.createElement(
 							'a',
@@ -37339,46 +37354,36 @@
 					)
 				),
 				React.createElement(
-					bs.Nav,
+					Nav,
 					null,
 					React.createElement(
-						bs.NavDropdown,
-						{ title: 'Videos' },
+						NavDropdown,
+						{ title: 'Videos', id: 'videoDropdown' },
 						React.createElement(
-							bs.MenuItem,
-							{ onClick: () => this.props.navClick('#'),
-								href: 'https://vimeo.com/77957602', target: '_blank' },
-							'PBS NewsHour'
+							MenuItem,
+							{ onClick: () => this.props.navClick('#sunkim'),
+								href: '#sunkim' },
+							'Christine Sun Kim'
 						),
 						React.createElement(
-							bs.MenuItem,
+							MenuItem,
 							{ onClick: () => this.props.navClick('#nancyreagan'),
 								href: '#nancyreagan' },
 							'Nancy Reagan Obituary'
-						),
-						React.createElement(
-							bs.MenuItem,
-							{ onClick: () => this.props.navClick('#') },
-							'Nashville'
-						),
-						React.createElement(
-							bs.MenuItem,
-							{ onClick: () => this.props.navClick('#') },
-							'YouTube Channel'
 						)
 					),
 					React.createElement(
-						bs.NavItem,
+						NavItem,
 						{ href: 'https://drive.google.com/file/d/0B1yWL4Lc9hjcV19BOURyWmZVbm8/view?usp=sharing', target: '_blank' },
 						'Resume'
 					),
 					React.createElement(
-						bs.NavItem,
+						NavItem,
 						{ href: 'https://whirlednavigation.wordpress.com/', target: '_blank' },
 						'Blog'
 					),
 					React.createElement(
-						bs.NavItem,
+						NavItem,
 						{ onClick: () => this.props.navClick('#'), href: '#' },
 						'About'
 					)
@@ -37393,20 +37398,44 @@
 /* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bs = __webpack_require__(172);
 	var React = __webpack_require__(1);
+	var ResponsiveEmbed = __webpack_require__(406);
 
 	var Video = React.createClass({
 		displayName: 'Video',
 
 
 		propTypes: {
-			url: React.PropTypes.string.isRequired
+			name: React.PropTypes.string.isRequired
 		},
 
 		render() {
 
-			return React.createElement('iframe', { width: '560', height: '315', src: this.props.url, frameBorder: '0', allowFullScreen: true });
+			var content = {
+				nancyreagan: {
+					url: 'https://www.youtube.com/embed/VESG6VuCS9c?rel=0&amp;vq=hd720',
+					copy: 'Here is the stuff about this video'
+				},
+				sunkim: {
+					url: 'https://www.youtube.com/embed/Q7vtvDbd2mw?rel=0&amp;vq=hd720',
+					copy: 'This is a video Sarah made while at the News Hour'
+				}
+			};
+
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					ResponsiveEmbed,
+					{ a16by9: true },
+					React.createElement('iframe', { src: content[this.props.name].url, allowFullScreen: true })
+				),
+				React.createElement(
+					'div',
+					{ style: { marginTop: 20, marginLeft: 40, marginRight: 40 } },
+					content[this.props.name].copy
+				)
+			);
 		}
 	});
 

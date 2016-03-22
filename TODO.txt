@@ -1,7 +1,9 @@
 TODO
 
 - What's with the woff files etc in the base dir?
-- Main page content
 - Get layout/color scheme decisions
-- Start adding real content
+- confirm HD for vids
 - Figure out hosting solution
+- minify everything
+- Favicon?
+- move resume to sarah's google drive

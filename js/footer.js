@@ -1,5 +1,6 @@
-var bs = require('react-bootstrap');
+var Col = require('react-bootstrap/lib/Col');
 var React = require('react');
+var Row = require('react-bootstrap/lib/Row');
 
 var Footer = React.createClass({
 	
@@ -8,18 +9,22 @@ var Footer = React.createClass({
 		return (
 			<div className='footer'>
 				<div className='container'>
-					<bs.Row>
-						<bs.Col md={4}>
+					<Row>
+						<Col md={4} sm={4}>
 							<a href='mailto:sarahcorapi@gmail.com'>sarahcorapi@gmail.com</a><br />
 							Sarah Corapi &copy; 2016
 							<span style={{marginLeft: 3, marginRight: 3}}>|</span>
 							All Rights Reserved
-						</bs.Col>
-						<bs.Col md={4} mdOffset={4} style={{textAlign: 'right'}}>
+						</Col>
+						<Col md={4} mdOffset={4} sm={4} smOffset={4} style={{textAlign: 'right'}}>
 							<a href='https://twitter.com/SarahCorapi' target='_blank'>@SarahCorapi</a><br />
-							<a href='https://www.linkedin.com/in/sarahcorapi' target='_blank'>LinkedIn</a>
-						</bs.Col>
-					</bs.Row>
+							<a href='https://www.linkedin.com/in/sarahcorapi' target='_blank'>LinkedIn</a><br />
+							<a href='https://github.com/zacharoth' target='_blank' 
+								style={{fontSize: 10, fontStyle: 'italic'}}>
+								Built with love by Zach Roth
+							</a>
+						</Col>
+					</Row>
 				</div>
 			</div>
 		);
