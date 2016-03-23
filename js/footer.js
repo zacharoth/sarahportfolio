@@ -10,13 +10,13 @@ var Footer = React.createClass({
 			<div className='footer'>
 				<div className='container'>
 					<Row>
-						<Col md={4} sm={4}>
+						<Col xs={4}>
 							<a href='mailto:sarahcorapi@gmail.com'>sarahcorapi@gmail.com</a><br />
 							Sarah Corapi &copy; 2016
 							<span style={{marginLeft: 3, marginRight: 3}}>|</span>
 							All Rights Reserved
 						</Col>
-						<Col md={4} mdOffset={4} sm={4} smOffset={4} style={{textAlign: 'right'}}>
+						<Col xs={4} xsOffset={4} style={{textAlign: 'right'}}>
 							<a href='https://twitter.com/SarahCorapi' target='_blank'>@SarahCorapi</a><br />
 							<a href='https://www.linkedin.com/in/sarahcorapi' target='_blank'>LinkedIn</a><br />
 							<a href='https://github.com/zacharoth' target='_blank' 

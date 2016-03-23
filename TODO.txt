@@ -1,9 +1,6 @@
-TODO
-
-- What's with the woff files etc in the base dir?
-- Get layout/color scheme decisions
-- confirm HD for vids
-- Figure out hosting solution
-- minify everything
-- Favicon?
-- move resume to sarah's google drive
+Sarah TODO
+- Buy domain
+- Color scheme
+- Favicon
+- Move resume sarah's google drive
+- Confirm HD for vids

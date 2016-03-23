@@ -1,11 +1,9 @@
 require('bootstrap/dist/css/bootstrap.css');
 require('../sass/main.scss');
 var About = require('./about');
-var Col = require('react-bootstrap/lib/Col');
 var Footer = require('./footer');
 var Header = require('./header');
 var React = require('react');
-var Row = require('react-bootstrap/lib/Row');
 var Video = require('./video');
 
 var App = React.createClass({
@@ -28,8 +26,8 @@ var App = React.createClass({
 		switch(this.state.path) {
 			case '#nancyreagan':
 				return <Video name='nancyreagan' />;
-			case '#sunkim':
-				return <Video name='sunkim' />;
+			case '#csk':
+				return <Video name='csk' />;
 			default:
 				return <About />;
 		}
@@ -41,11 +39,9 @@ var App = React.createClass({
 			<div>
 				<Header navClick={this.navClick}/>
 				<div className='main-content'>
-					<Row>
-						<Col md={10} mdOffset={1} style={{marginBottom: 20}}>
-							{ this.renderMainContent() }
-						</Col>
-					</Row>
+					<div style={{marginBottom: 20}}>
+						{ this.renderMainContent() }
+					</div>
 				</div>
 				<Footer />
 			</div>

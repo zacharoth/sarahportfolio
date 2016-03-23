@@ -21,8 +21,8 @@ var Header = React.createClass({
 				</Navbar.Header>
 				<Nav>
 					<NavDropdown title="Videos" id='videoDropdown'>
-						<MenuItem onClick={() => this.props.navClick('#sunkim')} 
-							href='#sunkim'>
+						<MenuItem onClick={() => this.props.navClick('#csk')} 
+							href='#csk'>
 							Christine Sun Kim
 						</MenuItem>
 						<MenuItem onClick={() => this.props.navClick('#nancyreagan')} 
