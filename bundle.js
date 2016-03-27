@@ -20186,7 +20186,7 @@
 						React.createElement(
 							'p',
 							{ style: { fontSize: 18 } },
-							'Whether it be changing people’s behaviors, bringing an issue to light, capturing a moment in time, or simply telling a great story, my method of choice is video.'
+							'Whether it be changing people’s behaviors, bringing an issue to light, capturing a moment in time, or simply telling a great story, my medium is video.'
 						)
 					),
 					React.createElement(
