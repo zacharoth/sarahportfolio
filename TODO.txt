@@ -1,6 +1,4 @@
 Sarah TODO
-- Buy domain
 - Color scheme
 - Favicon
-- Move resume sarah's google drive
-- Confirm HD for vids
+- Move resume to sarah's google drive

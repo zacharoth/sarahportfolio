@@ -16,18 +16,31 @@ var Header = React.createClass({
 			<Navbar>
 				<Navbar.Header>
 					<Navbar.Brand>
-						<a href="#" onClick={() => this.props.navClick('#')}>Sarah Corapi</a>
+						<a style={{fontSize: 22, fontWeight: 300}} href="#" 
+							onClick={() => this.props.navClick('#')}>Sarah Corapi</a>
 					</Navbar.Brand>
 				</Navbar.Header>
 				<Nav>
 					<NavDropdown title="Videos" id='videoDropdown'>
-						<MenuItem onClick={() => this.props.navClick('#csk')} 
-							href='#csk'>
-							Christine Sun Kim
-						</MenuItem>
 						<MenuItem onClick={() => this.props.navClick('#nancyreagan')} 
 							href='#nancyreagan'>
-							Nancy Reagan Obituary
+							{'Nancy Reagan Obituary'}
+						</MenuItem>
+						<MenuItem onClick={() => this.props.navClick('#csk')} 
+							href='#csk'>
+							{'Christine Sun Kim'}
+						</MenuItem>
+						<MenuItem onClick={() => this.props.navClick('#familyleave')}
+							href='#familyleave'>
+							{'Paid Family Leave in the U.S.'}
+						</MenuItem>
+						<MenuItem onClick={() => this.props.navClick('#nfl')}
+							href='#nfl'>
+							{'Concussions and the NFL'}
+						</MenuItem>
+						<MenuItem onClick={() => this.props.navClick('#copenhagen')}
+							href='#copenhagen'>
+							{'Public Transportation in Copenhagen'}
 						</MenuItem>
 					</NavDropdown>
 					<NavItem href="https://drive.google.com/file/d/0B1yWL4Lc9hjcV19BOURyWmZVbm8/view?usp=sharing" target='_blank'>

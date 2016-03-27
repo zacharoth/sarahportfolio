@@ -28,6 +28,12 @@ var App = React.createClass({
 				return <Video name='nancyreagan' />;
 			case '#csk':
 				return <Video name='csk' />;
+			case '#nfl':
+				return <Video name='nfl' />;
+			case '#familyleave':
+				return <Video name='familyleave' />;
+			case '#copenhagen':
+				return <Video name='copenhagen' />;
 			default:
 				return <About />;
 		}
