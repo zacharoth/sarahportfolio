@@ -45,7 +45,7 @@ var App = React.createClass({
 			<div>
 				<Header navClick={this.navClick}/>
 				<div className='main-content'>
-					<div style={{marginBottom: 20}}>
+					<div className='container' style={{marginBottom: 20}}>
 						{ this.renderMainContent() }
 					</div>
 				</div>
