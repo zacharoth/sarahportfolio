@@ -26,21 +26,15 @@ var Video = React.createClass({
 			},
 			familyleave: {
 				url: 'https://www.youtube.com/embed/Cl3sxZszpSk?rel=0&amp;vq=hd720&amp;start=74',
-				header: 'Paid Family Leave in the U.S.',
-				copy: '',
-				tagline: '',
+				header: "In the U.S., why haven't maternity leave laws kept pace with the increase of working parents?",
+				copy: 'I served as asistant shooter, helping chronicle the experience of Claire Prestwood',
+				tagline: "Produced for <a href='http://www.pbs.org/newshour/bb/u-s-support-paid-family-leave-one-pay/' target='_blank'>PBS NewsHour</a>, 2015.",
 			},
 			nfl: {
 				url: 'https://www.youtube.com/embed/cJDBJh3U2xk?rel=0&amp;vq=hd720&amp;start=136',
-				header: 'Concussions and the NFL',
-				copy: '',
-				tagline: '',
-			},
-			copenhagen: {
-				url: 'https://www.youtube.com/embed/po-Jf8_rbyQ?rel=0&amp;vq=large',
-				header: 'Public Transportation in Copenhagen',
-				copy: '',
-				tagline: '',
+				header: 'Will changing the sports culture reduce youth concussions?',
+				copy: 'I served as talent booker and coordinator; finding, pre-interviewing and securing former NFL player Fred McCrary for the segment.',
+				tagline: "Produced for <a href='http://www.pbs.org/newshour/bb/health-july-dec13-concussions_10-30/' target='_blank'>PBS NewsHour</a>, 2015.",
 			},
 		};
 

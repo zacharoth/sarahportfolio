@@ -1,4 +1,0 @@
-Sarah TODO
-- Color scheme
-- Favicon
-- Move resume to sarah's google drive

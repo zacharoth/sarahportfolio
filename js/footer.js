@@ -7,7 +7,7 @@ var Footer = React.createClass({
 	render() {
 
 		return (
-			<div className='footer'>
+			<div className='footer' style={this.props.style}>
 				<div className='container'>
 					<Row>
 						<Col xs={4}>

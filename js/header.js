@@ -13,7 +13,7 @@ var Header = React.createClass({
 
 	render() {
 		return (
-			<Navbar>
+			<Navbar style={this.props.style}>
 				<Navbar.Header>
 					<Navbar.Brand>
 						<a style={{fontSize: 22, fontWeight: 300}} href="#" 
@@ -21,7 +21,7 @@ var Header = React.createClass({
 					</Navbar.Brand>
 				</Navbar.Header>
 				<Nav>
-					<NavDropdown title="Videos" id='videoDropdown'>
+					<NavDropdown title="Work" id='videoDropdown'>
 						<MenuItem onClick={() => this.props.navClick('#nancyreagan')} 
 							href='#nancyreagan'>
 							{'Nancy Reagan Obituary'}
@@ -43,11 +43,11 @@ var Header = React.createClass({
 							{'Public Transportation in Copenhagen'}
 						</MenuItem>
 					</NavDropdown>
-					<NavItem href="https://drive.google.com/file/d/0B1yWL4Lc9hjcV19BOURyWmZVbm8/view?usp=sharing" target='_blank'>
+					<NavItem href="https://drive.google.com/file/d/0B_Cv88qPNOjfUzQ3dEtYSkxxRnM/view?usp=sharing" target='_blank'>
 						Resume
 					</NavItem>
 					<NavItem href='https://whirlednavigation.wordpress.com/' target='_blank'>Blog</NavItem>
-					<NavItem onClick={() => this.props.navClick('#')} href="#">About</NavItem>
+					<NavItem onClick={() => this.props.navClick('#about')} href="#about">About</NavItem>
 				</Nav>
 			</Navbar>
 		);

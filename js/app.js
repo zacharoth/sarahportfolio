@@ -3,6 +3,7 @@ require('../sass/main.scss');
 var About = require('./about');
 var Footer = require('./footer');
 var Header = require('./header');
+var Home = require('./home');
 var React = require('react');
 var Video = require('./video');
 
@@ -32,26 +33,37 @@ var App = React.createClass({
 				return <Video name='nfl' />;
 			case '#familyleave':
 				return <Video name='familyleave' />;
-			case '#copenhagen':
-				return <Video name='copenhagen' />;
-			default:
+			case '#about':
 				return <About />;
+			default:
+				return false;
 		}
 	},
 
 	render() {
-
-		return (
-			<div>
-				<Header navClick={this.navClick}/>
-				<div className='main-content'>
-					<div className='container' style={{marginBottom: 20}}>
-						{ this.renderMainContent() }
+		var mainContent = this.renderMainContent();
+		if (mainContent) {
+			return (
+				<div>
+					<Header navClick={this.navClick}/>
+					<div className='main-content'>
+						<div className='container' style={{marginBottom: 20}}>
+							{ mainContent }
+						</div>
 					</div>
+					<Footer />
 				</div>
-				<Footer />
-			</div>
-		);
+			);
+		} else {
+			return (
+				<div>
+					<Header navClick={this.navClick} style={{zIndex: 1, marginBottom: 0, opacity: .7,
+						position: 'absolute', top: 0, left: 0, width: '100%'}}/>
+					<Home style={{zIndex: 0}} />
+					<Footer style={{opacity: .7}}/>
+				</div>
+			);
+		}
 	}
 });
 
