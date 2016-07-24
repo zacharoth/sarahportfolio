@@ -38,10 +38,6 @@ var Header = React.createClass({
 							href='#nfl'>
 							{'Concussions and the NFL'}
 						</MenuItem>
-						<MenuItem onClick={() => this.props.navClick('#copenhagen')}
-							href='#copenhagen'>
-							{'Public Transportation in Copenhagen'}
-						</MenuItem>
 					</NavDropdown>
 					<NavItem href="https://drive.google.com/file/d/0B_Cv88qPNOjfUzQ3dEtYSkxxRnM/view?usp=sharing" target='_blank'>
 						Resume

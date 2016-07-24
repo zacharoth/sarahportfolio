@@ -21333,14 +21333,6 @@
 								},
 								href: '#nfl' },
 							'Concussions and the NFL'
-						),
-						React.createElement(
-							MenuItem,
-							{ onClick: function onClick() {
-									return _this.props.navClick('#copenhagen');
-								},
-								href: '#copenhagen' },
-							'Public Transportation in Copenhagen'
 						)
 					),
 					React.createElement(
@@ -29088,33 +29080,33 @@
 					{ controls: false, indicators: false, interval: 6000, pauseOnHover: false },
 					React.createElement(
 						CarouselItem,
-						{ animateIn: true, animateOut: true },
-						React.createElement(Image, { src: tap, responsive: true })
+						null,
+						React.createElement(Image, { src: tap, style: { height: '100%', width: '100%' } })
 					),
 					React.createElement(
 						CarouselItem,
-						{ animateIn: true, animateOut: true },
-						React.createElement(Image, { src: reagan, responsive: true })
+						null,
+						React.createElement(Image, { src: reagan, style: { height: '100%', width: '100%' } })
 					),
 					React.createElement(
 						CarouselItem,
-						{ animateIn: true, animateOut: true },
-						React.createElement(Image, { src: lines, responsive: true })
+						null,
+						React.createElement(Image, { src: lines, style: { height: '100%', width: '100%' } })
 					),
 					React.createElement(
 						CarouselItem,
-						{ animateIn: true, animateOut: true },
-						React.createElement(Image, { src: news, responsive: true })
+						null,
+						React.createElement(Image, { src: news, style: { height: '100%', width: '100%' } })
 					),
 					React.createElement(
 						CarouselItem,
-						{ animateIn: true, animateOut: true },
-						React.createElement(Image, { src: denmark, responsive: true })
+						null,
+						React.createElement(Image, { src: denmark, style: { height: '100%', width: '100%' } })
 					),
 					React.createElement(
 						CarouselItem,
-						{ animateIn: true, animateOut: true },
-						React.createElement(Image, { src: baby, responsive: true })
+						null,
+						React.createElement(Image, { src: baby, style: { height: '100%', width: '100%' } })
 					)
 				),
 				this.props.children

@@ -19,23 +19,23 @@ var Home = React.createClass({
 		return (
 			<div>
 				<Carousel controls={false} indicators={false} interval={6000} pauseOnHover={false}>
-					<CarouselItem animateIn={true} animateOut={true}>
-						<Image src={tap} responsive />
+					<CarouselItem>
+						<Image src={tap} style={{height: '100%', width: '100%'}} />
 					</CarouselItem>
-					<CarouselItem animateIn={true} animateOut={true}>
-						<Image src={reagan} responsive />
+					<CarouselItem>
+						<Image src={reagan} style={{height: '100%', width: '100%'}} />
 					</CarouselItem>
-					<CarouselItem animateIn={true} animateOut={true}>
-						<Image src={lines} responsive />
+					<CarouselItem>
+						<Image src={lines} style={{height: '100%', width: '100%'}} />
 					</CarouselItem>
-					<CarouselItem animateIn={true} animateOut={true}>
-						<Image src={news} responsive />
+					<CarouselItem>
+						<Image src={news} style={{height: '100%', width: '100%'}} />
 					</CarouselItem>
-					<CarouselItem animateIn={true} animateOut={true}>
-						<Image src={denmark} responsive />
+					<CarouselItem>
+						<Image src={denmark} style={{height: '100%', width: '100%'}} />
 					</CarouselItem>
-					<CarouselItem animateIn={true} animateOut={true}>
-						<Image src={baby} responsive />
+					<CarouselItem>
+						<Image src={baby} style={{height: '100%', width: '100%'}} />
 					</CarouselItem>
 				</Carousel>
 				{this.props.children}
